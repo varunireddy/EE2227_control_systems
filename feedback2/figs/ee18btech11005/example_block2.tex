@@ -1,0 +1,23 @@
+\tikzstyle{block} = [draw, fill=blue!20, rectangle, 
+    minimum height=3em, minimum width=4em]
+\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{out} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+\begin{tikzpicture}[auto, node distance=2cm]
+    \node [input, name=input] {};
+    \node [block, right of=input] (control) {$\frac{-R_2}{R_1}$};
+    \node [right of=control](out) {};
+    \node [sum, right of=out] (sum) {};
+    \node [block, right of=sum] (controller1) {G(s)};
+    \node [output, right of=controller1] (output) {};
+    \node [block, below of=controller1] (feedback) {H};
+    \draw [draw,->] (input) -- node {$V_{in}$} (control);
+    \draw [->] (control) -- node {$V_1$}(sum);
+    \draw [->] (sum) -- node {} (controller1);
+    \draw [->] (controller1) -- node [name=y] {$V_o$}(output);
+    \draw [->] (y) |- (feedback);
+    \draw [->] (feedback) -| node[pos=0.99]{$-$}  node [near end] {$V_f$} (sum);
+\end{tikzpicture}
