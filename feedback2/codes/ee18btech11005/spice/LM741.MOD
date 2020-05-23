@@ -1,4 +1,3 @@
-
 *//////////////////////////////////////////////////////////////////////
 * (C) National Semiconductor, Inc.
 * Models developed and under copyright by:
@@ -16,6 +15,7 @@
 *                                (800) 272-9959
 * For Applications support, contact the Internet address:
 *  amps-apps@galaxy.nsc.com
+
 *//////////////////////////////////////////////////////////
 *LM741 OPERATIONAL AMPLIFIER MACRO-MODEL
 *//////////////////////////////////////////////////////////
@@ -27,7 +27,7 @@
 *                   |   |   |   |   output
 *                   |   |   |   |   |
 *                   |   |   |   |   |
-.SUBCKT LM741    1   2  99  50  28
+.SUBCKT LM741/NS    1   2  99  50  28
 *
 *Features:
 *Improved performance over industry standards

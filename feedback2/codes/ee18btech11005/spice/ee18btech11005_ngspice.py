@@ -1,5 +1,5 @@
 #Code by B.Varuni
-#date 17th,May 2020
+#date 23rdh,May 2020
 
 import numpy as np  
 from matplotlib import pyplot as plt  
