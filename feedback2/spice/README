@@ -1,0 +1,18 @@
+*****************RUNNING A NETLIST FILE and VIEWING THE SIMULATION RESULTS*************************
+STEP1:- enter the directory in which the netlist file is saved
+
+STEP2:- enter the command to run the netlist file
+     ************************************
+     *   ngspice netlistfilename.net    *
+     ************************************
+
+This opens the ngspice prompt.
+If you dont want the prompt to appear then enter the command
+     ************************************
+     *  ngspice -b netlistfilename.net  *
+     ************************************
+
+STEP3:- After running the netlist file.The data is stored in a .dat file.
+
+STEP4:- The obtained datafile is imported in python. And then results are plotted.
+
